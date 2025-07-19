@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍳 PantryPal
 
-## Getting Started
+**Transform your leftover ingredients into delicious meals using AI.**
 
-First, run the development server:
+PantryPal is a smart, mobile-first recipe generator built with modern tools like Groq, Supabase, and Next.js 15.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Demo](https://drive.google.com/file/d/1JvVYuCkcSyJ0Q5UjgQIqHOGqk2BAzK58/view?usp=sharing)
+
+---
+
+## 🚀 Features (In Progress)
+
+- 📸 **Ingredient scanning** via camera (Google Vision)
+- 🤖 **AI-powered recipe generation** (Groq)
+- ⚡ **Smart suggestions** based on your cooking habits
+- 🔄 **Multiple recipe variants** from the same ingredients
+- 🧠 **Personalized preferences** + cooking streaks
+- 🗂️ **Recipe history and ratings**
+- 🔔 **Notifications** for expiring ingredients
+- 🎯 **Fully responsive** mobile-first design
+
+---
+
+## 🛠 Tech Stack
+
+| Frontend | Backend/Infra | AI & Integrations |
+|----------|---------------|-------------------|
+| Next.js 15 (App Router) | Supabase (Postgres, Auth) | Groq (Recipe generation) |
+| TypeScript | Clerk (Authentication) | Google Vision API |
+| Tailwind CSS | Upstash Redis (Caching) | Vercel (Deployment) |
+| shadcn/ui | Vercel AI SDK | |
+
+---
+
+## 📦 Project Structure
+
+```
+pantrypal/
+├── app/                # Pages via App Router
+├── components/         # UI and custom components
+├── lib/               # Client configs (db, auth, ai)
+├── hooks/             # Custom React hooks
+├── types/             # Shared TypeScript types
+└── public/            # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Local Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- [pnpm](https://pnpm.io/) installed
+- Node.js 18+
+- Accounts on: Supabase, Clerk, and any AI/Image services you plan to use
 
-To learn more about Next.js, take a look at the following resources:
+### Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Install dependencies
+pnpm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Copy environment variables
+cp .env.local.example .env.local
+# Fill in your .env.local with the appropriate keys
 
-## Deploy on Vercel
+# Start development server
+pnpm dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧪 Development Standards
+
+- ✅ **ESLint + Prettier** for clean code
+- ✅ **Husky + lint-staged** for pre-commit safety
+- ✅ **GitHub Actions** for lint/type/format CI
+- ✅ **Typed with TypeScript**
+- ✅ **Uses pnpm** for fast dependency management
+
+---
+
+## 🔐 Environment Variables
+
+All secrets are stored in `.env.local`. Example keys:
+
+```bash
+# Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+
+# Redis
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+
+# AI Provider
+AI_API_KEY=
+
+# Vision API (Optional)
+VISION_API_KEY=
+```
+
+---
+
+## 🛣️ Roadmap
+
+PantryPal is currently under solo development. See [ROADMAP.md](ROADMAP.md) for full feature planning.
+
+---
+
+## 🙋‍♂️ About the Developer
+
+Hi, I'm **Himel** — a solo developer building PantryPal to solve a simple everyday problem: figuring out what to cook with what I already have.
+
+This is both a real-world tool and a place for me to explore full-stack development with modern tools.
+
+---
+
+## 🛡 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**Made with 🧠, ☕, and love — PantryPal**
+
+</div>
