@@ -4,7 +4,7 @@
 
 PantryPal is a smart, mobile-first recipe generator built with modern tools like Groq, Supabase, and Next.js 15.
 
-![Demo](https://drive.google.com/file/d/1JvVYuCkcSyJ0Q5UjgQIqHOGqk2BAzK58/view?usp=sharing)
+![Demo](https://drive.google.com/uc?export=view&id=1JvVYuCkcSyJ0Q5UjgQIqHOGqk2BAzK58)
 
 ---
 
